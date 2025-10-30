@@ -1,125 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malipo Stock Management</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #fff7eb;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Mecatrónica</title>
 
-h1 {
-    color: #000000;
-    text-align: center; 
-}
+  <style>
+    /* Estilo interno (sin CSS externo) */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      text-align: center;
+    }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
+    header {
+      background: linear-gradient(90deg, #0044ff, #00d4ff);
+      color: white;
+      padding: 1.5rem 0;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
 
-table, th, td {
-    border: 3px solid #060303;
-}
+    nav {
+      margin: 1.5rem 0;
+    }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-}
+    a {
+      display: inline-block;
+      background-color: #1a1a1a;
+      color: #00d4ff;
+      text-decoration: none;
+      border: 2px solid #00d4ff;
+      border-radius: 8px;
+      padding: 0.8rem 1.5rem;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-th {
-    background-color: #0241bf;
-    color: rgb(242, 241, 247);
-}
+    a:hover {
+      background-color: #00d4ff;
+      color: #0d0d0d;
+    }
 
-tr:nth-child(even) {
-    background-color: #17c2a8;
-}
+    section {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      width: 80%;
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid #00d4ff;
+      box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+    }
 
-form {
-    margin-bottom: 20px;
-    background-color: rgb(232, 45, 204);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-input[type="text"],
-input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-a {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #007BFF;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-    </style>
+    footer {
+      margin-top: 2rem;
+      color: #00d4ff;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Malipo Stock Management</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Code</th>
-                <th>Item</th>
-                <th>Vendor</th>
-                <th>Quantity</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>The code of the item</td>
-                <td>Name of the item</td>
-                <td>Manufacturer of the product</td>
-                <td>Amount of items there are available</td>
-                <td>Price of the item</td>
-            </tr>
-        </tbody>
-    </table>
+  <header>
+    <h1>Página Mecatrónica</h1>
+  </header>
 
-    <ul>
-      <li><a href="{{url_for('add')}}">Add Item</a></li>
-      <li><a href="{{url_for('remove')}}">Delete Item</a></li>
-      <li><a href="{{url_for('update')}}">Update Item</a></li>
-      <li><a href="{{url_for('view_inventory')}}">View inventory</a></li>
-    </ul>
+  <nav>
+    <a href="#sec1">Sección 1</a>
+    <a href="#sec2">Sección 2</a>
+    <a href="#sec3">Sección 3</a>
+  </nav>
 
+  <section id="sec1">
+    <h2>Automatización Industrial</h2>
+    <p>Aquí podrías hablar de sensores, PLCs y sistemas automatizados.</p>
+  </section>
+
+  <section id="sec2">
+    <h2>Robótica</h2>
+    <p>Contenido sobre robots industriales, servomotores, brazos robóticos, etc.</p>
+  </section>
+
+  <section id="sec3">
+    <h2>Control y Electrónica</h2>
+    <p>Temas como circuitos de control, microcontroladores y sistemas embebidos.</p>
+  </section>
+
+  <footer>
+    <p>Diseño con estilo mecatrónico ⚙️ | HTML puro</p>
+  </footer>
 </body>
 </html>
